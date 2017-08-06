@@ -9,8 +9,9 @@
 <meta name="apple-mobile-web-app-title" content="Roll a dice!">
 <meta name="application-name" content="Roll a dice!">
 <meta name="theme-color" content="#000000">
-<title>Roll a dice!</title>
-<style>body{background-color:black;color:white;text-align:center}span{display:inline-block;padding:5px; width:200px; height:200px;}</style></head>
+<link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
+<title>Roll a dice!</title>	
+<style>body{background-color:black;color:white;text-align:center;position:relative;margin:0;padding-bottom:6rem;min-height: 100%}span{display:inline-block;padding:5px;width:200px;height:200px;}html{height:100%;box-sizing:border-box}*,*:before,*:after{box-sizing: inherit}.footer{position:absolute;right:0;bottom:0;left:0;padding:1rem;text-align:center}.footer a{font-size: 13px;text-decoration: none;font-family: 'Raleway', sans-serif;color:#303031}</style></head>
 <body>
 <form action="" method="GET" id="form"><select name="dice" autofocus onchange="this.form.submit()"><option value="4">4</option><option selected value="6">6</option><option value="8">8</option><option value="9">9</option></select></form>
 <?php
@@ -35,5 +36,6 @@ $display['9'] = '<svg version="1.1" viewBox="0 0 150 150" xmlns="http://www.w3.o
 //if PHP 7 then random_int(1,$dice) whithout lib/random
 echo('<span onClick=\'location.reload()\'>' . $display[random_int(1,$dice)] . '</span>' );
 ?>
+<div class="footer"><a href="https://mxywes.github.io/roll-a-dice-php/">More information</a></div>
 </body>
 </html>
